@@ -9,21 +9,18 @@ var timeSlot = document.querySelector(".timeslot");
 
 var currentTimeSlot = moment().format("HH");
 
-currentTimeSlot =
 
 
 //Function to display time slot in color (present, future, & past)
 $(".timeslot").each(function(){
-    var timeBlock = $(this).attr("id");
-    console.log(currentTimeSlot, timeBlock);
-    if (timeBlock < currentTimeSlot) {
-        $(this).addClass("past");
-    }
-    else if (timeBlock === currentTimeSlot) {
+    var timeBlock =parseInt($(this).prev().attr("data-hour"));
+    if (timeBlock === currentTimeSlot) {
         $(this).addClass("present");
+    }
+    else if (timeBlock < currentTimeSlot) {
+        $(this).addClass("past");
     }
     else {
         $(this).addClass("future");
     }
-
 })
