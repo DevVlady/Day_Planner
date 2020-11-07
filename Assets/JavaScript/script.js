@@ -31,9 +31,11 @@ var obtainTasks = JSON.parse(localStorage.getItem("object", timeSlotArray));
 
 //Function that will save my content from the input field into the local storage
 $(".saveBtn").on("click", function(){
+    var timeBlock = $(this).prev().attr("data-hour");
+    var inputField = $(this).prev().val().trim();
 
 
-    
+
 });
 
 });
