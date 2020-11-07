@@ -14,15 +14,16 @@ currentTimeSlot =
 
 //Function to display time slot in color (present, future, & past)
 $(".timeslot").each(function(){
-    var currentBlock = $(this).attr("id");
-    console.log(currentTimeSlot, currentBlock);
-    if (currentTimeSlot > currentBlock) {
+    var timeBlock = $(this).attr("id");
+    console.log(currentTimeSlot, timeBlock);
+    if (timeBlock < currentTimeSlot) {
         $(this).addClass("past");
     }
-    else if (currentTimeSlot < currentBlock) {
-        $(this).addClass("future");
+    else if (timeBlock === currentTimeSlot) {
+        $(this).addClass("present");
     }
     else {
         $(this).addClass("future");
     }
+
 })
