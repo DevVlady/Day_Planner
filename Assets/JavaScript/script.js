@@ -13,7 +13,7 @@ var currentTimeSlot = moment().format("HH");
 
 //Function to display time slot in color (present, future, & past)
 $(".timeslot").each(function(){
-    var timeBlock =parseInt($(this).prev().attr("data-hour"));
+    var timeBlock = parseInt($(this).prev().attr("data-hour"));
     if (timeBlock === currentTimeSlot) {
         $(this).addClass("present");
     }
@@ -23,16 +23,16 @@ $(".timeslot").each(function(){
     else {
         $(this).addClass("future");
     }
-})
+});
 
 
 //Function that will save my content from the input field into the local storage
-$(".saveBtn").on("click", function(){
-    var time = $(this).prev().attr("data-hour");
-    var inputSlot = $(this).prev().val().trim();
+// $(".saveBtn").on("click", function(){
+//     var time = $(this).prev().attr("data-hour");
+//     var inputSlot = $(this).prev().val().trim();
 
-    var newData = {
-        
-    }
+//     var newData = {
 
-})
+//     }
+
+// })
