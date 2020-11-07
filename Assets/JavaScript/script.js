@@ -26,10 +26,15 @@ $(".timeslot").each(function() {
     }
 });
 
+//Variables used for the local storage
+var task = localStorage.getItem("task");
+
 
 //Function that will save my content from the input field into the local storage
 $(".saveBtn").on("click", function(){
-
-})
+    
 
 });
+
+});
+
