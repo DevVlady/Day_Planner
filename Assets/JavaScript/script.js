@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 //Function that will print the date and time on the webpage
-var date = moment().format('LL');
+var date = moment().format('LLLL');
 $("#currentDay").text(date);
 
 var timeSlotArray = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
@@ -13,7 +13,7 @@ var currentTimeSlot = moment().format("HH");
 
 
 //Function to display time slot in color (present, future, & past)
-$(".timeslot").each(function() {
+$(".input-slot").each(function() {
     var timeBlock = parseInt($(this).prev().attr("data-hour"));
     if (timeBlock == currentTimeSlot) {
         $(this).addClass("present");
@@ -26,14 +26,14 @@ $(".timeslot").each(function() {
     }
 });
 
-//Variables used for the local storage
-var task = localStorage.getItem("task");
-
+//Obtain tasks from local storage
+var obtainTasks = JSON.parse(localStorage.getItem("object", timeSlotArray));
 
 //Function that will save my content from the input field into the local storage
 $(".saveBtn").on("click", function(){
-    
 
+
+    
 });
 
 });
