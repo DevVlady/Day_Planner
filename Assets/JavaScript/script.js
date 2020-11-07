@@ -24,3 +24,15 @@ $(".timeslot").each(function(){
         $(this).addClass("future");
     }
 })
+
+
+//Function that will save my content from the input field into the local storage
+$(".saveBtn").on("click", function(){
+    var time = $(this).prev().attr("data-hour");
+    var inputSlot = $(this).prev().val().trim();
+
+    var newData = {
+        
+    }
+
+})
