@@ -28,23 +28,34 @@ $(document).ready(function(){
         }
     });
 
+    var tasks = JSON.parse(localStorage.getItem("taskObject")) || [];
+
+
 
     //Function that will save my content from the input field into the local storage
     $(".saveBtn").on("click", function(){
         //Variable to reflect the hour class set in the html
-        var hours = $(this).attr("data-hour");
+        var hours = $(this).attr("id");
         //Variable to store the text entered by the user
         var inputVal = $(this).prev().val().trim();
-        //This will set the item to local storage once the user types something in the input field
-        localStorage.setItem(hours, inputVal);
+        
+        var newTask = {
+            "clock": hours,
+            "input": inputVal
+        }
+        tasks.push(newTask);
+        localStorage.setItem("taskObject", JSON.stringify(tasks));
     });
+
 
     //Function to pull data that was stored when the user saved their task in the input field
     function dailyTask () {
         for (var i = 0; i < currentTimeSlot; i++) {
-            $(this).val(JSON.parse(localStorage.getItem(timeSlotArray)));
+            $(".input-slot").val(JSON.parse(localStorage.getItem(timeSlotArray)));
         }
     }
+
+
 
 });
 
