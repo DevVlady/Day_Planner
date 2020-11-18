@@ -4,4 +4,6 @@ Description: Your work day just got a lot more organized. With this day planner 
 
 Technologies and programming languages used in this project are: HTML5, CSS3, JavaScript, & JQuery.
 
+Deployed Site: https://vlady14.github.io/Day_Planner/
+
 ![image](https://user-images.githubusercontent.com/71519918/98611258-35172180-22b7-11eb-9626-367e6faea074.png)
